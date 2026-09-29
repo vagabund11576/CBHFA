@@ -9,21 +9,24 @@
 
     <title>Training Resources</title>
 
+
     <style>
 
-        /* GENERAL PAGE */
+        * {
+            box-sizing: border-box;
+        }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            background-color: #f5f5f5;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
             color: #333333;
         }
 
         .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
         }
 
 
@@ -31,24 +34,39 @@
 
         .main-image {
             width: 100%;
+            max-height: 450px;
+            object-fit: cover;
             display: block;
-            border-radius: 12px;
-            margin-bottom: 40px;
+            border-radius: 14px;
+            margin-bottom: 35px;
+        }
+
+
+        /* TITLE */
+
+        h1 {
+            text-align: center;
+            font-size: 38px;
+            margin: 20px 0 10px;
+            color: #222;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 50px;
+            color: #666;
         }
 
 
         /* HEADINGS */
 
-        h1 {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
-
         h2 {
-            font-size: 28px;
-            margin-top: 50px;
+            font-size: 30px;
+            margin-top: 55px;
             margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #ddd;
         }
 
 
@@ -58,17 +76,20 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px;
+            margin-bottom: 60px;
         }
 
         .video {
             background: white;
-            padding: 15px;
+            padding: 18px;
             border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
         }
 
         .video h3 {
             margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 20px;
         }
 
         .video iframe {
@@ -79,34 +100,50 @@
         }
 
 
-        /* DOCUMENT SECTION */
+        /* LANGUAGE SECTION */
 
-        .documents {
-            margin-top: 50px;
-        }
-
-        .language {
+        .language-section {
             background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-radius: 14px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         }
 
-        .language h3 {
+        .language-title {
+            font-size: 28px;
             margin-top: 0;
-            font-size: 22px;
+            margin-bottom: 25px;
         }
 
-        .language a {
+
+        /* CATEGORY FOLDERS */
+
+        .categories {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .category {
             display: block;
-            margin: 12px 0;
-            color: #0066cc;
+            background-color: #f5f6f7;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            padding: 17px;
             text-decoration: none;
+            color: #333333;
+            font-size: 16px;
+            transition: all 0.2s ease;
         }
 
-        .language a:hover {
-            text-decoration: underline;
+        .category:hover {
+            background-color: #e8ebee;
+            transform: translateY(-2px);
+        }
+
+        .folder {
+            margin-right: 8px;
         }
 
 
@@ -117,21 +154,46 @@
             text-align: right;
         }
 
+        .arabic .folder {
+            margin-right: 0;
+            margin-left: 8px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 25px;
+            border-top: 1px solid #ddd;
+            color: #777;
+            font-size: 14px;
+        }
+
 
         /* MOBILE */
 
-        @media (max-width: 700px) {
+        @media (max-width: 750px) {
 
             .container {
-                padding: 15px;
+                padding: 20px 15px 40px;
+            }
+
+            h1 {
+                font-size: 30px;
             }
 
             .videos {
                 grid-template-columns: 1fr;
             }
 
-            h1 {
-                font-size: 28px;
+            .categories {
+                grid-template-columns: 1fr;
+            }
+
+            .language-section {
+                padding: 20px;
             }
 
         }
@@ -146,9 +208,9 @@
 <div class="container">
 
 
-    <!-- ===================================== -->
-    <!-- MAIN PICTURE -->
-    <!-- ===================================== -->
+    <!-- =========================================
+         MAIN IMAGE
+    ========================================== -->
 
     <img
         src="images/main-picture.png"
@@ -157,16 +219,20 @@
     >
 
 
-    <!-- ===================================== -->
-    <!-- PAGE TITLE -->
-    <!-- ===================================== -->
+    <!-- =========================================
+         TITLE
+    ========================================== -->
 
     <h1>Training Resources</h1>
 
+    <p class="intro">
+        Access the training videos and materials below.
+    </p>
 
-    <!-- ===================================== -->
-    <!-- VIDEOS -->
-    <!-- ===================================== -->
+
+    <!-- =========================================
+         VIDEOS
+    ========================================== -->
 
     <h2>Videos</h2>
 
@@ -235,68 +301,318 @@
     </div>
 
 
-    <!-- ===================================== -->
-    <!-- DOCUMENTS -->
-    <!-- ===================================== -->
 
-    <div class="documents">
+    <!-- =========================================
+         ENGLISH
+    ========================================== -->
 
-        <h2>Documents</h2>
+    <div class="language-section">
 
+        <h2 class="language-title">🇬🇧 English</h2>
 
-        <!-- ENGLISH -->
+        <div class="categories">
 
-        <div class="language">
+            <a class="category" href="documents/english/Core%20Modules/">
+                <span class="folder">📁</span>
+                Core Modules
+            </a>
 
-            <h3>🇬🇧 English</h3>
+            <a class="category" href="documents/english/PP%20Communicable%20Disease%20Prevention/">
+                <span class="folder">📁</span>
+                PP Communicable Disease Prevention
+            </a>
 
-            <a href="documents/english/" >
-                📁 English documents
+            <a class="category" href="documents/english/PP%20Health%20in%20Emergencies/">
+                <span class="folder">📁</span>
+                PP Health in Emergencies
+            </a>
+
+            <a class="category" href="documents/english/PP%20Healthy%20ageing/">
+                <span class="folder">📁</span>
+                PP Healthy ageing
+            </a>
+
+            <a class="category" href="documents/english/PP%20Immunisation/">
+                <span class="folder">📁</span>
+                PP Immunisation
+            </a>
+
+            <a class="category" href="documents/english/PP%20MHPSS/">
+                <span class="folder">📁</span>
+                PP MHPSS
+            </a>
+
+            <a class="category" href="documents/english/PP%20MNCH/">
+                <span class="folder">📁</span>
+                PP MNCH
+            </a>
+
+            <a class="category" href="documents/english/PP%20NCD/">
+                <span class="folder">📁</span>
+                PP NCD
+            </a>
+
+            <a class="category" href="documents/english/PP%20NCD%20and%20Youth/">
+                <span class="folder">📁</span>
+                PP NCD and Youth
+            </a>
+
+            <a class="category" href="documents/english/PP%20Road%20Safety%20Module/">
+                <span class="folder">📁</span>
+                PP Road Safety Module
+            </a>
+
+            <a class="category" href="documents/english/PP%20Violence%20Prevention/">
+                <span class="folder">📁</span>
+                PP Violence Prevention
+            </a>
+
+            <a class="category" href="documents/english/PP%20VNRBD/">
+                <span class="folder">📁</span>
+                PP VNRBD
             </a>
 
         </div>
-
-
-        <!-- FRENCH -->
-
-        <div class="language">
-
-            <h3>🇫🇷 Français</h3>
-
-            <a href="documents/french/" >
-                📁 Documents en français
-            </a>
-
-        </div>
-
-
-        <!-- SPANISH -->
-
-        <div class="language">
-
-            <h3>🇪🇸 Español</h3>
-
-            <a href="documents/spanish/" >
-                📁 Documentos en español
-            </a>
-
-        </div>
-
-
-        <!-- ARABIC -->
-
-        <div class="language arabic">
-
-            <h3>🇸🇦 العربية</h3>
-
-            <a href="documents/arabic/" >
-                📁 الوثائق باللغة العربية
-            </a>
-
-        </div>
-
 
     </div>
+
+
+
+    <!-- =========================================
+         FRENCH
+    ========================================== -->
+
+    <div class="language-section">
+
+        <h2 class="language-title">🇫🇷 Français</h2>
+
+        <div class="categories">
+
+            <a class="category" href="documents/french/Core%20Modules/">
+                <span class="folder">📁</span>
+                Core Modules
+            </a>
+
+            <a class="category" href="documents/french/PP%20Communicable%20Disease%20Prevention/">
+                <span class="folder">📁</span>
+                PP Communicable Disease Prevention
+            </a>
+
+            <a class="category" href="documents/french/PP%20Health%20in%20Emergencies/">
+                <span class="folder">📁</span>
+                PP Health in Emergencies
+            </a>
+
+            <a class="category" href="documents/french/PP%20Healthy%20ageing/">
+                <span class="folder">📁</span>
+                PP Healthy ageing
+            </a>
+
+            <a class="category" href="documents/french/PP%20Immunisation/">
+                <span class="folder">📁</span>
+                PP Immunisation
+            </a>
+
+            <a class="category" href="documents/french/PP%20MHPSS/">
+                <span class="folder">📁</span>
+                PP MHPSS
+            </a>
+
+            <a class="category" href="documents/french/PP%20MNCH/">
+                <span class="folder">📁</span>
+                PP MNCH
+            </a>
+
+            <a class="category" href="documents/french/PP%20NCD/">
+                <span class="folder">📁</span>
+                PP NCD
+            </a>
+
+            <a class="category" href="documents/french/PP%20NCD%20and%20Youth/">
+                <span class="folder">📁</span>
+                PP NCD and Youth
+            </a>
+
+            <a class="category" href="documents/french/PP%20Road%20Safety%20Module/">
+                <span class="folder">📁</span>
+                PP Road Safety Module
+            </a>
+
+            <a class="category" href="documents/french/PP%20Violence%20Prevention/">
+                <span class="folder">📁</span>
+                PP Violence Prevention
+            </a>
+
+            <a class="category" href="documents/french/PP%20VNRBD/">
+                <span class="folder">📁</span>
+                PP VNRBD
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         SPANISH
+    ========================================== -->
+
+    <div class="language-section">
+
+        <h2 class="language-title">🇪🇸 Español</h2>
+
+        <div class="categories">
+
+            <a class="category" href="documents/spanish/Core%20Modules/">
+                <span class="folder">📁</span>
+                Core Modules
+            </a>
+
+            <a class="category" href="documents/spanish/PP%20Communicable%20Disease%20Prevention/">
+                <span class="folder">📁</span>
+                PP Communicable Disease Prevention
+            </a>
+
+            <a class="category" href="documents/spanish/PP%20Health%20in%20Emergencies/">
+                <span class="folder">📁</span>
+                PP Health in Emergencies
+            </a>
+
+            <a class="category" href="documents/spanish/PP%20Healthy%20ageing/">
+                <span class="folder">📁</span>
+                PP Healthy ageing
+            </a>
+
+            <a class="category" href="documents/spanish/PP%20Immunisation/">
+                <span class="folder">📁</span>
+                PP Immunisation
+            </a>
+
+            <a class="category" href="documents/spanish/PP%20MHPSS/">
+                <span class="folder">📁</span>
+                PP MHPSS
+            </a>
+
+            <a class="category" href="documents/spanish/PP%20MNCH/">
+                <span class="folder">📁</span>
+                PP MNCH
+            </a>
+
+            <a class="category" href="documents/spanish/PP%20NCD/">
+                <span class="folder">📁</span>
+                PP NCD
+            </a>
+
+            <a class="category" href="documents/spanish/PP%20NCD%20and%20Youth/">
+                <span class="folder">📁</span>
+                PP NCD and Youth
+            </a>
+
+            <a class="category" href="documents/spanish/PP%20Road%20Safety%20Module/">
+                <span class="folder">📁</span>
+                PP Road Safety Module
+            </a>
+
+            <a class="category" href="documents/spanish/PP%20Violence%20Prevention/">
+                <span class="folder">📁</span>
+                PP Violence Prevention
+            </a>
+
+            <a class="category" href="documents/spanish/PP%20VNRBD/">
+                <span class="folder">📁</span>
+                PP VNRBD
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         ARABIC
+    ========================================== -->
+
+    <div class="language-section arabic">
+
+        <h2 class="language-title">🇸🇦 العربية</h2>
+
+        <div class="categories">
+
+            <a class="category" href="documents/arabic/Core%20Modules/">
+                <span class="folder">📁</span>
+                Core Modules
+            </a>
+
+            <a class="category" href="documents/arabic/PP%20Communicable%20Disease%20Prevention/">
+                <span class="folder">📁</span>
+                PP Communicable Disease Prevention
+            </a>
+
+            <a class="category" href="documents/arabic/PP%20Health%20in%20Emergencies/">
+                <span class="folder">📁</span>
+                PP Health in Emergencies
+            </a>
+
+            <a class="category" href="documents/arabic/PP%20Healthy%20ageing/">
+                <span class="folder">📁</span>
+                PP Healthy ageing
+            </a>
+
+            <a class="category" href="documents/arabic/PP%20Immunisation/">
+                <span class="folder">📁</span>
+                PP Immunisation
+            </a>
+
+            <a class="category" href="documents/arabic/PP%20MHPSS/">
+                <span class="folder">📁</span>
+                PP MHPSS
+            </a>
+
+            <a class="category" href="documents/arabic/PP%20MNCH/">
+                <span class="folder">📁</span>
+                PP MNCH
+            </a>
+
+            <a class="category" href="documents/arabic/PP%20NCD/">
+                <span class="folder">📁</span>
+                PP NCD
+            </a>
+
+            <a class="category" href="documents/arabic/PP%20NCD%20and%20Youth/">
+                <span class="folder">📁</span>
+                PP NCD and Youth
+            </a>
+
+            <a class="category" href="documents/arabic/PP%20Road%20Safety%20Module/">
+                <span class="folder">📁</span>
+                PP Road Safety Module
+            </a>
+
+            <a class="category" href="documents/arabic/PP%20Violence%20Prevention/">
+                <span class="folder">📁</span>
+                PP Violence Prevention
+            </a>
+
+            <a class="category" href="documents/arabic/PP%20VNRBD/">
+                <span class="folder">📁</span>
+                PP VNRBD
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+        Training Resources
+    </footer>
+
 
 </div>
 
