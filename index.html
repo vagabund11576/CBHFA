@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Project</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .video {
+            margin: 30px 0;
+        }
+
+        .video iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: none;
+        }
+
+        .documents {
+            margin-top: 30px;
+        }
+
+        .document {
+            padding: 15px;
+            margin: 10px 0;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .document a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #0366d6;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>My Project</h1>
+
+    <!-- Main picture -->
+    <img src="images/main-picture.jpg"
+         alt="Main project picture"
+         class="hero-image">
+
+
+    <!-- Videos -->
+    <h2>Videos</h2>
+
+    <div class="video">
+        <h3>Video 1</h3>
+
+        <iframe
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+
+    <div class="video">
+        <h3>Video 2</h3>
+
+        <iframe
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+
+    <!-- Documents -->
+    <h2>Documents</h2>
+
+    <div class="documents">
+
+        <div class="document">
+            🇬🇧
+            <a href="documents/english.pdf" download>
+                Download document – English
+            </a>
+        </div>
+
+        <div class="document">
+            🇫🇷
+            <a href="documents/french.pdf" download>
+                Télécharger le document – Français
+            </a>
+        </div>
+
+        <div class="document">
+            🇪🇸
+            <a href="documents/spanish.pdf" download>
+                Descargar documento – Español
+            </a>
+        </div>
+
+        <div class="document">
+            🇸🇦
+            <a href="documents/arabic.pdf" download>
+                تحميل الوثيقة – العربية
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
