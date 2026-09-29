@@ -1,145 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Project</title>
+    <title>Community Health Resources</title>
 
     <style>
+
+        /* GENERAL PAGE */
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             background-color: #f5f5f5;
-            color: #333;
+            color: #333333;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
-            background: white;
             padding: 30px;
         }
 
-        .hero-image {
+
+        /* MAIN IMAGE */
+
+        .main-image {
             width: 100%;
-            max-height: 500px;
-            object-fit: cover;
             display: block;
+            border-radius: 12px;
             margin-bottom: 40px;
         }
 
+
+        /* HEADINGS */
+
         h1 {
             text-align: center;
+            font-size: 36px;
             margin-bottom: 40px;
         }
 
         h2 {
+            font-size: 28px;
             margin-top: 50px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+
+        /* VIDEOS */
+
+        .videos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
         }
 
         .video {
-            margin: 30px 0;
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .video h3 {
+            margin-top: 0;
         }
 
         .video iframe {
             width: 100%;
             aspect-ratio: 16 / 9;
             border: none;
+            border-radius: 8px;
         }
+
+
+        /* DOCUMENT SECTION */
 
         .documents {
-            margin-top: 30px;
+            margin-top: 50px;
         }
 
-        .document {
-            padding: 15px;
-            margin: 10px 0;
-            background: #f0f0f0;
-            border-radius: 5px;
+        .language {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
-        .document a {
+        .language h3 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .language a {
+            display: block;
+            margin: 12px 0;
+            color: #0066cc;
             text-decoration: none;
-            font-weight: bold;
-            color: #0366d6;
         }
+
+        .language a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ARABIC */
+
+        .arabic {
+            direction: rtl;
+            text-align: right;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .container {
+                padding: 15px;
+            }
+
+            .videos {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
 <div class="container">
 
-    <!-- Main picture -->
-    <img src="images/main-picture.png"
-         alt="Main project picture"
-         class="hero-image">
 
-    <h1>CBHFA</h1>
+    <!-- ===================================== -->
+    <!-- MAIN PICTURE -->
+    <!-- ===================================== -->
+
+    <img
+        src="images/main-picture.png"
+        alt="Training resources"
+        class="main-image"
+    >
 
 
-    <!-- Videos -->
+    <!-- ===================================== -->
+    <!-- PAGE TITLE -->
+    <!-- ===================================== -->
+
+    <h1>Training Resources</h1>
+
+
+    <!-- ===================================== -->
+    <!-- VIDEOS -->
+    <!-- ===================================== -->
+
     <h2>Videos</h2>
 
-    <div class="video">
-        <h3>Video 1</h3>
+    <div class="videos">
 
-        <iframe
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-            allowfullscreen>
-        </iframe>
+
+        <!-- VIDEO 1 -->
+
+        <div class="video">
+
+            <h3>Video 1</h3>
+
+            <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_1"
+                title="Video 1"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+
+        <!-- VIDEO 2 -->
+
+        <div class="video">
+
+            <h3>Video 2</h3>
+
+            <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_2"
+                title="Video 2"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+
+        <!-- VIDEO 3 -->
+
+        <div class="video">
+
+            <h3>Video 3</h3>
+
+            <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_3"
+                title="Video 3"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+
+        <!-- VIDEO 4 -->
+
+        <div class="video">
+
+            <h3>Video 4</h3>
+
+            <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_4"
+                title="Video 4"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
     </div>
 
 
-    <div class="video">
-        <h3>Video 2</h3>
-
-        <iframe
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-            allowfullscreen>
-        </iframe>
-    </div>
-
-
-    <!-- Documents -->
-    <h2>Documents</h2>
+    <!-- ===================================== -->
+    <!-- DOCUMENTS -->
+    <!-- ===================================== -->
 
     <div class="documents">
 
-        <div class="document">
-            🇬🇧
-            <a href="documents/english.pdf" download>
-                Download document – English
+        <h2>Documents</h2>
+
+
+        <!-- ENGLISH -->
+
+        <div class="language">
+
+            <h3>🇬🇧 English</h3>
+
+            <a href="documents/english/" >
+                📁 English documents
             </a>
+
         </div>
 
-        <div class="document">
-            🇫🇷
-            <a href="documents/french.pdf" download>
-                Télécharger le document – Français
+
+        <!-- FRENCH -->
+
+        <div class="language">
+
+            <h3>🇫🇷 Français</h3>
+
+            <a href="documents/french/" >
+                📁 Documents en français
             </a>
+
         </div>
 
-        <div class="document">
-            🇪🇸
-            <a href="documents/spanish.pdf" download>
-                Descargar documento – Español
+
+        <!-- SPANISH -->
+
+        <div class="language">
+
+            <h3>🇪🇸 Español</h3>
+
+            <a href="documents/spanish/" >
+                📁 Documentos en español
             </a>
+
         </div>
 
-        <div class="document">
-            🇸🇦
-            <a href="documents/arabic.pdf" download>
-                تحميل الوثيقة – العربية
+
+        <!-- ARABIC -->
+
+        <div class="language arabic">
+
+            <h3>🇸🇦 العربية</h3>
+
+            <a href="documents/arabic/" >
+                📁 الوثائق باللغة العربية
             </a>
+
         </div>
+
 
     </div>
 
 </div>
 
 </body>
+
 </html>
